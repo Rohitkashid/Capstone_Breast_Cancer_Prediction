@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>prediction</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+      }
+      html {
+        background-color: #eecee5;
+      }
+      nav {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .logo {
+        font-size: 25px;
+        color: #fff;
+        padding: 0 15px;
+      }
+      .menu {
+        margin-left: 500px;
+      }
+      .menu ul li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: montserrat;
+        color: #fff;
+        padding: 5px 15px;
+      }
+      .menu ul li a:hover {
+        background: rgb(188, 108, 160);
+      }
+      .socials a {
+        text-decoration: none;
+        background: rgb(128, 0, 70);
+        color: #fff;
+        padding: 10px 35px;
+      }
+      .header {
+        background-color: #454545;
+      }
+      @media (max-width: 1000px) {
+        nav {
+          flex-direction: column;
+          align-items: flex;
+        }
+        .menu {
+          margin: 0 15px 0 0;
+        }
+        .menu ul {
+          padding: 0;
+        }
+        .menu ul li {
+          margin: 0 15px 0 0;
+        }
+        .socials {
+          margin-top: 25px;
+        }
+      }
+      h1 {
+        color: rgb(149, 30, 103);
+        text-align: center;
+      }
+
+      .warning {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      /* Style the form elements */
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      /* Style the submit button */
+      .btn-primary {
+        background-color: rgb(39, 134, 44);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .result {
+        background-color: #f0e9ee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="logo"><b>BreastCure</b></div>
+        <div class="menu">
+          <ul>
+            <li><a href="./home.html">Back to Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h1>Breast cancer prediction system</h1>
+      <form action="/prediction" method="POST">
+        <div class="form-group">
+          <label for="clump_thickness">clump_thickness</label>
+          <input
+            type="number"
+            id="clump_thickness"
+            name="clump_thickness"
+            placeholder="Enter clump_thickness"
+            class="form-control"
+            required
+            step="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="unif_cell_size">unif_cell_size</label>
+          <input
+            type="number"
+            id="unif_cell_size"
+            name="unif_cell_size"
+            placeholder="Enter unif_cell_size"
+            class="form-control"
+            required
+            step="00"
+          />
+        </div>
+        <div class="form-group">
+          <label for="unif_cell_shape">unif_cell_shape</label>
+          <input
+            type="number"
+            id="unif_cell_shape"
+            name="unif_cell_shape"
+            placeholder="Enter unif_cell_shape"
+            class="form-control"
+            required
+            step="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="marg_adhesion">marg_adhesion</label>
+          <input
+            type="number"
+            step="0.01"
+            id="marg_adhesion"
+            name="marg_adhesion"
+            placeholder="Enter marg_adhesion"
+            class="form-control"
+            required
+            step="0"
+          />
+        </div>
+        <div class="form-group">
+          <label for="single_epith_cell_size">single_epith_cell_size</label>
+          <input
+            type="number"
+            step="0.01"
+            id="single_epith_cell_size"
+            name="single_epith_cell_size"
+            placeholder="Enter single_epith_cell_size"
+            class="form-control"
+            required
+            step="0"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bland_chrom">bland_chrom</label>
+          <input
+            type="number"
+            step="0.01"
+            id="bland_chrom"
+            name="bland_chrom"
+            placeholder="Enter bland_chrom"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="norm_nucleoli">norm_nucleoli</label>
+          <input
+            type="number"
+            step="0.01"
+            id="norm_nucleoli"
+            name="norm_nucleoli"
+            placeholder="Enter norm_nucleoli"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="mitoses">mitoses</label>
+          <input
+            type="number"
+            step="0.01"
+            id="mitoses"
+            name="mitoses"
+            placeholder="Enter mitoses value"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn-primary">Get Prediction</button>
+        </div>
+      </form>
+    </div>
+
+    {% if result %}
+    <div
+      class="container form-control result"
+      style="
+        left: 50%;
+        margin: auto;
+        width: 50%;
+        border: 3px solid rgb(128, 0, 107);
+        padding: 10px;
+      "
+    >
+      <div class="card-body" style="text-align: center">
+        <h3 class="card-title" style="text-decoration: underline; color: #575757cb;">
+          Predicted result is:
+        </h3>
+        <!-- <p class="card-text">{{ result[0] }}</p> -->
+
+        {% if result[0] == 0 %}
+        <h3 class="card-text" style="color: rgb(5, 145, 0)">
+          Cancer is benign i.e not harmful
+        </h3>
+        {% elif result[0] == 1 %}
+        <h3 class="card-text" style="color: rgb(232, 22, 22)">
+          Cancer is malignant
+        </h3>
+        {% else %}
+        <h3 class="card-text">Invalid result</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

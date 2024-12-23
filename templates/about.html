@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>about</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+	<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+      }
+      html {
+        background-color: #eecee5;
+      }
+      nav {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .logo {
+        font-size: 25px;
+        color: #fff;
+        padding: 0 15px;
+      }
+      .menu {
+        margin-left: 500px;
+      }
+      .menu ul li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: montserrat;
+        color: #fff;
+        padding: 5px 15px;
+      }
+      .menu ul li a:hover {
+        background: rgb(188, 108, 160);
+      }
+      .socials a {
+        text-decoration: none;
+        background: rgb(128, 0, 111);
+        color: #fff;
+        padding: 10px 35px;
+      }
+      .header {
+        background-color: #eecee5;
+      }
+	  .about-image{
+		display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+	  }
+      @media (max-width: 1000px) {
+        nav {
+          flex-direction: column;
+          align-items: flex;
+        }
+        .menu {
+          margin: 0 15px 0 0;
+        }
+        .menu ul {
+          padding: 0;
+        }
+        .menu ul li {
+          margin: 0 15px 0 0;
+        }
+        .socials {
+          margin-top: 25px;
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="logo"><b>BreastCure</b></div>
+        <div class="menu">
+          <ul>
+            <li><a href="./home.html">Back to Home</a></li>
+
+            <li><a href="./contact.html">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container justify-content-center">
+        <b><h1>About us</h1></b>
+
+        <p style="margin-left: 5%">
+          Welcome to <b>"BREAST CANCER USING MACHINE LEARNING"</b>, where
+          innovation meets compassion in the fight against breast cancer. We are
+          a dedicated team of professionals driven by a shared vision to
+          revolutionize early detection and prediction of breast cancer through
+          the power of machine learning.
+          <br />
+        </p>
+        <b><h2>Our mission</h2></b>
+        <p style="margin-left: 5%">
+          At <b>"BREAST CANCER USING MACHINE LEARNING"</b>, our mission is
+          clear: to make a significant impact on breast cancer outcomes by
+          leveraging cutting-edge technology. We aim to enhance the accuracy and
+          efficiency of breast cancer prediction, providing individuals and
+          healthcare professionals with invaluable tools for early diagnosis.
+        </p>
+        <img style="width: 20%;height: 20%;" class="about-image"
+        src={{url_for('static', filename ="/Image/breastcancer.jpg")}}
+        alt="early detection saves lives">
+      </div>
+    </div>
+  </body>
+</html>

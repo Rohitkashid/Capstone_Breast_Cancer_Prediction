@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8"> 
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+	margin: 0; 
+	padding: 0;
+	font-family: montserrat;
+   
+}
+html{
+    background-color: #eecee5;
+}
+nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 100px;
+	color: #fff;
+    background: rgba(0,0,0,0.5);
+    
+}
+.logo {
+	font-size: 25px;
+	color: #fff;
+	padding: 0 15px;
+}
+.menu{
+	margin-left: 500px;
+}
+.menu ul li {
+	display: inline-block;
+	margin: 0 15px;
+}
+.menu ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: montserrat;
+	color: #fff;
+	padding: 5px 15px;
+	
+}
+.menu ul li a:hover{
+    background: rgb(195, 112, 178);
+}
+.socials a {
+	text-decoration: none;
+	background: rgb(128, 0, 70);
+	color: #fff;
+	padding: 10px 35px;
+}
+.header {
+	height: 100vh;
+	background-image: linear-gradient(rgba(126, 126, 126, 0.5),rgba(126, 126, 126, 0.5)),url(./static/Image/Breast-Cancer.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.banner-text {
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 26%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+}
+.banner-text h1 {
+	font-size: 60px;
+	margin: 0;
+}
+.banner-text p {
+	margin: 15px 0 40px;
+}
+.banner-text button {
+	background: rgb(128, 0, 70);
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 20px;
+	font-family: montserrat;
+	display: inline-block;
+}
+@media (max-width: 1000px) {
+	nav {
+		flex-direction: column;
+		align-items: flex;
+	}
+	.menu {
+		margin: 0 15px 0 0;
+	}
+	.menu ul {
+		padding: 0;
+	}
+	.menu ul li {
+		margin: 0 15px 0 0;
+	}
+	.socials {
+		margin-top: 25px;
+	}
+	.banner-text {
+		left: 50%;
+		text-align: center;
+		width: 70%;
+	}
+    .banner-text h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 600px) {
+	.logo {
+		margin-top: 0;
+		font-size: 17px;
+	}
+	nav {
+		padding: 15px;
+	}
+	.menu ul li a {
+		font-size: 10px;
+        padding: 5px;
+	}
+	.socials {
+		display: none;
+	}
+	.banner-text {
+		left: 50%;
+		text-align: center;
+		width: 80%;
+	}
+    .banner-text h1 {
+        font-size: 18px;
+    }
+	.banner-text p {
+		margin: 15px 0;
+		font-size: 11px;
+	}
+    .banner-text button {
+        font-size: 12px;
+    }
+}
+
+body {
+            font-family: Arial, sans-serif;
+        }
+		
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 0fr); 
+            gap: 20px; 
+            padding: 20px;
+            padding-right: 20px;
+			align-items: center;
+			
+            
+        }
+
+        
+        .grid-item {
+            background-color: #df79cd94;
+            border: 1px solid rgb(175, 25, 128);
+            padding: 20px;
+            height: 200px;
+            width: 400px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .grid-Box
+        {
+            display: grid;
+            justify-items: center;
+            margin-top: 30px;
+           
+        }
+
+       
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr); 
+            }
+            .grid-Box
+            {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        
+        .grid-item:hover {
+            background-color: rgb(197, 68, 113);
+        }
+		
+footer {
+	margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-social{
+    margin-left: 80px;
+}
+.footer-social img {
+    margin-top: 0%;
+    height: 30px;
+    width: 30px;
+    margin-right: 50px;
+    padding: 10px;
+    
+}
+.footer-social p {
+    margin-right: 40px;
+}
+
+.footer-links img{
+    height: 30px;
+    width: 30px;
+}
+.footer-bottom{
+    margin-left: 30px;
+}
+
+    </style>   
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo"><b>BreastCure</b></div>
+            <div class="menu">
+                <ul>
+                    
+                    <li><a href="./about.html">About Us</a></li>
+                    
+                    <li><a href="./contact.html">Contact</a></li>
+
+                    <li><a href="./prediction.html">Prediction</a></li>
+                   
+			    </ul>
+            </div>
+            
+        </nav>
+        <div class="banner-text">
+            <h1>Breast cancer Prediction<br>System</h1>
+            <p>This project focuses on predicting breast cancer with using machine learning techniques</p>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/breast-cancer?gclid=Cj0KCQiA1rSsBhDHARIsANB4EJbCiKnAxtVzwss6tyjes1UvbroADuSsLTPbbyFGcTeZmHN7NsvcjP0aAgFhEALw_wcB"> <button type="button">Learn more about breast cancer</button></a>
+        </div>   
+    </div>
+
+<div class="grid-Box">
+    <h2 >Brest cancer Prediction in Numbers</h2>
+	<div class="grid-container">
+        
+        <div class="grid-item"> 
+			<h3 >Accuracy</h3>
+            <h2 >Up to 97%</h2>
+            <p>Accuracy of Breast Cancer prediction depends on the quality of statistical data and can vary from 94% to 97%.</p></div>
+        <div class="grid-item">
+			<h3 >Algorithms</h3>
+            <h2 >5+ Algorithms are compared</h2>
+            <p>Algorithm like KNN,SVM,LR,Decision Tree,Naive Bayes ect are compared for high accuracy.</p></div>
+        <div class="grid-item">
+			<h3 >Breast Cancer types</h3>
+            <h2 >2 Types</h2>
+            <p>Breast caner predicated for 2 types cancers ie.malignant & bening</p></div>
+        <div class="grid-item">
+			<h3 >Data Sources</h3>
+            <h2 >9 Inputs</h2>
+            <p>We make sure the prediction are based on the most comprehensive data analysis.</p></div>
+        
+    </div>
+</div>
+    <footer>
+        <footer>
+            <div class="footer-content">
+                <h3 style="text-decoration: underline;">Contact Details</h3>
+                <div class="footer-links">
+                    
+                        <p>Author: Rohit kashid</p>
+                        <p>Contact:8956804424</p>
+                        <a href="mailto:rohitkashid4950@gmail.com"> <img src="{{url_for('static', filename ="/Image/gmail_logo.png")}}" alt="Gmail"></a>
+                        
+                </div>
+                <hr>
+                <h3>Follow onlong</h3>
+                <div class="footer-social">
+                    
+                    <a href="www.linkedin.com/in/rohit-kashid"><img src="{{url_for('static', filename ="/Image/linkedin-icon-image.png")}}" alt="linkedin"></a>
+                    <a href="https://github.com/Rohitkashid"><img src="{{url_for('static', filename ="/Image/github-icon image.png")}}" alt="Github"></a>
+                    <a href="https://www.instagram.com/rohit_kashid12"><img src="{{url_for('static', filename ="/Image/insta-icon image.png")}}" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 Website. All rights reserved.
+            </div>
+        </footer>
+        
+    </footer>
+</body>
+</html>

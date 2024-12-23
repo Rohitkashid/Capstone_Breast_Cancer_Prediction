@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+      }
+      html {
+        background-color: #eecee5;
+      }
+      nav {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .logo {
+        font-size: 25px;
+        color: #fff;
+        padding: 0 15px;
+      }
+      .menu {
+        margin-left: 500px;
+      }
+      .menu ul li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: montserrat;
+        color: #fff;
+        padding: 5px 15px;
+      }
+      .menu ul li a:hover {
+        background: rgb(184, 86, 155);
+      }
+      .socials a {
+        text-decoration: none;
+        background: rgb(128, 0, 109);
+        color: #fff;
+        padding: 10px 35px;
+      }
+      .header {
+        background-color: #454545;
+      }
+      @media (max-width: 1000px) {
+        nav {
+          flex-direction: column;
+          align-items: flex;
+        }
+        .menu {
+          margin: 0 15px 0 0;
+        }
+        .menu ul {
+          padding: 0;
+        }
+        .menu ul li {
+          margin: 0 15px 0 0;
+        }
+        .socials {
+          margin-top: 25px;
+        }
+      }
+      body,
+      h1,
+      p,
+      form {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: grid;
+        grid-gap: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type='text'],
+      input[type='email'],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #30af32;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #c248a3;
+      }
+      .alert {
+        width: 100%;
+        background: #da8bc6;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        font-size: 10px;
+        font-weight: 900;
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="logo"><b>BreastCure</b></div>
+        <div class="menu">
+          <ul>
+            <li><a href="./home.html">Back to Home</a></li>
+
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <br>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Please fill out the form below to get in touch with us.</p>
+      <form action="" id="contactForm">
+        <div class="alert">your respond is recorded</div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+  </body>
+</html>

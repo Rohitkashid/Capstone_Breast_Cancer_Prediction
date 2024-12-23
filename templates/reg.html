@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>How to create Firebase login and register?</title>
+    <style>
+      body {
+        height: 100vh;
+        background: #eecee5;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 22px;
+      }
+
+      main {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      html {
+        background-color: #daddb1;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5%;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .logo {
+        font-size: 25px;
+        color: #fff;
+      }
+
+      .menu {
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+
+      .menu ul li a {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        padding: 5px 15px;
+      }
+
+      .menu ul li a:hover {
+        background: rgb(118, 15, 106);
+      }
+
+      .socials a {
+        text-decoration: none;
+        background: rgb(66, 134, 218);
+        color: #fff;
+        padding: 10px 20px;
+      }
+
+      .header {
+        background-color: #454545;
+      }
+
+      .container {
+        padding: 20px 5%;
+      }
+
+      /* form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        } */
+
+      .col-sm-4 {
+        flex: 1;
+        margin: 10px 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (max-width: 1000px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .menu {
+          margin: 10px 0;
+        }
+
+        .menu ul li {
+          margin: 0 0 10px 0;
+          display: block;
+        }
+
+        .socials {
+          margin-top: 10px;
+        }
+      }
+      #registration_form {
+        margin: auto;
+        border: #471743 5px solid;
+        padding: 10px 10px 10px 10px;
+        width: 75%;
+      }
+      #registration_form .col-sm-12 {
+        margin-bottom: 20px;
+      }
+      #login_form {
+        margin: auto;
+        border: #471743 5px solid;
+        padding: 10px 10px 10px 10px;
+        width: 75%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar navbar-default">
+      <div class="main">
+        <div class="header">
+          <nav>
+            <div class="logo"><b>BreastCure</b></div>
+            <div class="menu">
+              <h2>To use app please login or register....👨‍⚕️</h2>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-light"
+    >
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <form
+          name="registration_form"
+          id="registration_form"
+          method="post"
+          action="#"
+          enctype="multipart/form-data"
+          class="p-4 border rounded bg-white shadow"
+        >
+          <h2 class="text-center mb-6 text-dark">
+            <u><b>Sign Up Here</b></u>
+          </h2>
+
+          <div class="mb-6">
+            <label for="email" class="form-label fw-bold">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="password" class="form-label fw-bold">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button
+            type="button"
+            id="register"
+            name="register"
+            class="btn btn-success w-100"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <hr />
+
+        <form
+          name="login_form"
+          id="login_form"
+          method="post"
+          action="#"
+          enctype="multipart/form-data"
+          class="p-4 mt-4 border rounded bg-white shadow"
+        >
+          <h2 class="text-center mb-6 text-dark">
+            <u><b>Login Here</b></u>
+          </h2>
+
+          <div class="mb-6">
+            <label for="login_email" class="form-label fw-bold">Email:</label>
+            <input
+              type="text"
+              name="login_email"
+              id="login_email"
+              class="form-control"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="login_password" class="form-label fw-bold"
+              >Password:</label
+            >
+            <input
+              type="password"
+              name="login_password"
+              id="login_password"
+              class="form-control"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button
+            type="button"
+            id="login"
+            name="login"
+            class="btn btn-success w-100"
+            onclick="redirectToSecondPage()"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+
+    <br />
+  </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js'
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+    } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
+
+    const firebaseConfig = {
+      apiKey: 'AIzaSyC2HW1w2VVlHD3lVBnuO2h9y8g8r1knOwQ',
+      authDomain: 'autho-53752.firebaseapp.com',
+      projectId: 'autho-53752',
+      storageBucket: 'autho-53752.appspot.com',
+      messagingSenderId: '61566147591',
+      appId: '1:61566147591:web:ff8b5e79f5a03c4a271ea2',
+    }
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
+    const auth = getAuth()
+    console.log(app)
+
+    //----- New Registration code start
+    document.getElementById('register').addEventListener('click', function () {
+      var email = document.getElementById('email').value
+      var password = document.getElementById('password').value
+      //For new registration
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user
+          console.log(user)
+          alert('Registration successfully!!')
+          document.getElementById('registration_form').reset()
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          // ..
+          console.log(errorMessage)
+          alert(error)
+        })
+    })
+    //----- End
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add click event listener to the login button
+      document.getElementById('login').addEventListener('click', function () {
+        var email = document.getElementById('login_email').value
+        var password = document.getElementById('login_password').value
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user
+            console.log(user)
+            //alert(user.email + ' Login successfully!!!')
+
+            // Check if the element with ID 'logout' exists before trying to modify its style
+            var logoutElement = document.getElementById('logout')
+            if (logoutElement) {
+              logoutElement.style.display = 'block'
+            }
+
+            // Redirect to another page after successful login
+            window.location.href = 'home.html' // Replace with the actual URL
+          })
+          .catch((error) => {
+            const errorCode = error.code
+            const errorMessage = error.message
+            console.log(errorMessage)
+            alert(errorMessage)
+          })
+      })
+    })
+
+    //----- Logout code start
+    document.getElementById('logout').addEventListener('click', function () {
+      signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          console.log('Sign-out successful.')
+          alert('Sign-out successful.')
+          document.getElementById('logout').style.display = 'none'
+        })
+        .catch((error) => {
+          // An error happened.
+          console.log('An error happened.')
+        })
+    })
+    //----- End
+  </script>
+</html>

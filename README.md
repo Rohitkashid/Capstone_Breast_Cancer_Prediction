@@ -1,19 +1,19 @@
 # Capstone_Breast_Cancer_Prediction
 
 ## Description
-  -Developed a machine learning-based breast cancer prediction system to enhance early-stage cancer detection.
-  -Evaluated multiple ML algorithms to classify tumors as benign or malignant, optimizing performance through data processing and feature selection.
-  -Achieved the best results with the K-Nearest Neighbors (KNN) algorithm for accurate classification.
-  -Integrated the ML prediction model into a web application for user-friendly accessibility.
-  -Tech Stack
-    -Python 
-    -Scikit-learn
-    -Pandas
-    -NumPy
-    -Flask
-    -HTML
-    -CSS
-    -Git
+  - Developed a machine learning-based breast cancer prediction system to enhance early-stage cancer detection.
+  - Evaluated multiple ML algorithms to classify tumors as benign or malignant, optimizing performance through data processing and feature selection.
+  - Achieved the best results with the K-Nearest Neighbors (KNN) algorithm for accurate classification.
+  - Integrated the ML prediction model into a web application for user-friendly accessibility.
+  - Tech Stack
+    - Python 
+    - Scikit-learn
+    - Pandas
+    - NumPy
+    - Flask
+    - HTML
+    - CSS
+    - Git
 
 ## required installs
   - install python version - 3.0.0 or later

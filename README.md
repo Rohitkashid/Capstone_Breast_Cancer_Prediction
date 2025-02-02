@@ -6,14 +6,14 @@
   - Achieved the best results with the K-Nearest Neighbors (KNN) algorithm for accurate classification.
   - Integrated the ML prediction model into a web application for user-friendly accessibility.
   - Tech Stack
-    -Backend
+    - Backend
       - Python
         - Flask
         - Scikit-learn
         - Pandas
         - NumPy
         - matplotlib
-    -Frontend
+    - Frontend
       - HTML
       - CSS
     - Database

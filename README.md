@@ -6,14 +6,20 @@
   - Achieved the best results with the K-Nearest Neighbors (KNN) algorithm for accurate classification.
   - Integrated the ML prediction model into a web application for user-friendly accessibility.
   - Tech Stack
-    - Python 
-    - Scikit-learn
-    - Pandas
-    - NumPy
-    - Flask
-    - HTML
-    - CSS
-    - Git
+    -Backend
+      - Python
+        - Flask
+        - Scikit-learn
+        - Pandas
+        - NumPy
+        - matplotlib
+    -Frontend
+      - HTML
+      - CSS
+    - Database
+      - FireBase
+    - SCM
+      - Git
 
 ## required installs
   - install python version - 3.0.0 or later
